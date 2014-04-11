@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <session-config>
+        <session-timeout>5</session-timeout>
+    </session-config>
+    <!-- Default page to serve -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- listeners -->
+    <listener>
+        <listener-class>travelapp.listeners.TravelAppServletContextListener</listener-class>
+    </listener>
+
+    <!-- filters -->
+    <!-- filter mappings -->
+
+    <!-- servlets -->
+    <servlet>
+        <servlet-name>CheckAvailability</servlet-name>
+        <servlet-class>travelapp.CheckAvailabilityServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateBooking</servlet-name>
+        <servlet-class>travelapp.CreateBookingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveBooking</servlet-name>
+        <servlet-class>travelapp.RemoveBookingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FinalizeBookings</servlet-name>
+        <servlet-class>travelapp.FinalizeBookingsServlet</servlet-class>
+    </servlet>
+    <!-- configuration -->
+    <servlet>
+        <servlet-name>Hotels</servlet-name>
+        <servlet-class>travelapp.config.RetrieveAllHotelsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Rooms</servlet-name>
+        <servlet-class>travelapp.config.RetrieveRoomsFromHotelServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Bookings</servlet-name>
+        <servlet-class>travelapp.config.RetrieveAllBookingsServlet</servlet-class>
+    </servlet>
+    <servlet>
+	<servlet-name>RemoveAllBookings</servlet-name>
+	<servlet-class>travelapp.config.RemoveAllBookingsServlet</servlet-class>
+    </servlet>
+    <!-- servlet mappings -->
+    <servlet-mapping>
+        <servlet-name>CheckAvailability</servlet-name>
+        <url-pattern>/checkavailability</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateBooking</servlet-name>
+        <url-pattern>/createbooking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveBooking</servlet-name>
+        <url-pattern>/removebooking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FinalizeBookings</servlet-name>
+        <url-pattern>/finalize</url-pattern>
+    </servlet-mapping>
+    <!-- configuration -->
+    <servlet-mapping>
+        <servlet-name>Hotels</servlet-name>
+        <url-pattern>/config/hotels</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Rooms</servlet-name>
+        <url-pattern>/config/rooms</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Bookings</servlet-name>
+        <url-pattern>/config/bookings</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+	<servlet-name>RemoveAllBookings</servlet-name>
+	<url-pattern>/config/cleanbookings</url-pattern>
+    </servlet-mapping>
+</web-app>
