@@ -5,3 +5,6 @@ build
 /build
 private
 /private
+/dist/
+/hotel-booking-JavaEE-war/dist/
+/hotel-booking-JavaEE-ejb/dist/

@@ -7,7 +7,7 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="100">
-                    <file>${reference.TravelApplicationJEE-ejb.dist}</file>
+                    <file>${reference.hotel-booking-JavaEE-ejb.dist}</file>
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
@@ -20,7 +20,7 @@
         </data>
         <references xmlns="http://www.netbeans.org/ns/ant-project-references/1">
             <reference>
-                <foreign-project>TravelApplicationJEE-ejb</foreign-project>
+                <foreign-project>hotel-booking-JavaEE-ejb</foreign-project>
                 <artifact-type>jar</artifact-type>
                 <script>build.xml</script>
                 <target>dist</target>
